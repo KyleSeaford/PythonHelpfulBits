@@ -2,7 +2,7 @@ import pyautogui
 
 # cool stuff in pyautogui
 
-pyautogui.size()
+# pyautogui.size()
 
 pyautogui.confirm('Your programme is Cool.')
 
@@ -12,9 +12,9 @@ pyautogui.alert('ERROR: No button found.', 'ERROR', 'OK')
 
 # pyautogui.click(100, 100, button='left')
 
-pyautogui.scroll(200)
+#pyautogui.scroll(200)
 
-pyautogui.scroll(-200)
+#pyautogui.scroll(-200)
 
 pyautogui.typewrite('Hello world!')
 
