@@ -20,9 +20,9 @@ pyautogui.typewrite('Hello world!')
 
 pyautogui.hotkey('ctrl', 'c')
 
-pyautogui.moveTo(100, 100, duration=1)
+#pyautogui.moveTo(100, 100, duration=1)
 
-pyautogui.dragTo(100, 100, duration=1)
+#pyautogui.dragTo(100, 100, duration=1)
 
 pyautogui.screenshot('screenshot.png')
 
