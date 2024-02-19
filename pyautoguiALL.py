@@ -4,9 +4,9 @@ import pyautogui
 
 # pyautogui.size()
 
-pyautogui.confirm('Your programme is Cool.')
+#pyautogui.confirm('Your programme is Cool.')
 
-pyautogui.alert('ERROR: No button found.', 'ERROR', 'OK')
+#pyautogui.alert('ERROR: No button found.', 'ERROR', 'OK')
 
 # pyautogui.click(100, 100)
 
@@ -24,6 +24,6 @@ pyautogui.alert('ERROR: No button found.', 'ERROR', 'OK')
 
 #pyautogui.dragTo(100, 100, duration=1)
 
-pyautogui.screenshot('screenshot.png')
+#pyautogui.screenshot('screenshot.png')
 
 #pyautogui.press('enter')
