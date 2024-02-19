@@ -16,9 +16,9 @@ pyautogui.alert('ERROR: No button found.', 'ERROR', 'OK')
 
 #pyautogui.scroll(-200)
 
-pyautogui.typewrite('Hello world!')
+#pyautogui.typewrite('Hello world!')
 
-pyautogui.hotkey('ctrl', 'c')
+#pyautogui.hotkey('ctrl', 'c')
 
 #pyautogui.moveTo(100, 100, duration=1)
 
@@ -26,4 +26,4 @@ pyautogui.hotkey('ctrl', 'c')
 
 pyautogui.screenshot('screenshot.png')
 
-pyautogui.press('enter')
+#pyautogui.press('enter')
