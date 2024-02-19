@@ -2,7 +2,7 @@ import pyautogui
 
 # cool stuff in pyautogui
 
-# pyautogui.size()
+#pyautogui.size()
 
 #pyautogui.confirm('Your programme is Cool.')
 
