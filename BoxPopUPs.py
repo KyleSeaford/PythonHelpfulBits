@@ -12,3 +12,22 @@ pyautogui.prompt('Please enter your name:')
 # Use the password function to display a message box with a password input field
 pyautogui.password('Enter your password:')
 
+
+# an example of using the confirm function with custom buttons, i dont know why its called deepthoughts, but it is
+
+buttons = pyautogui.confirm('Your program is Cool.', 'deepthoughts', buttons=['Yes', 'No', 'Cancel'])
+
+if buttons == 'Yes':
+    pyautogui.alert('You are cool', 'deepthoughts', 'OK')
+elif buttons == 'No':
+    pyautogui.alert('You are not cool', 'deepthoughts', 'OK')
+else:
+    pyautogui.alert('You are undecided', 'deepthoughts', 'OK')
+
+
+# an example of using the prompt function with a default value
+    
+name = pyautogui.prompt('Please enter your name:', default= 'Kyle Seaford')
+password = pyautogui.password('Enter your password:', default='password123')
+
+pyautogui.alert('Name: ' + name + '\nPassword: ' + password , 'Your Information', 'OK')
