@@ -28,9 +28,9 @@ pip install logging
 ``` 
 
 ## Usage
-You can explore the provided scripts in this repository to understand how PyAutoGUI can be utilized for different automation tasks. Each script is well-commented to explain its purpose and usage.
+You can explore the provided scripts in this repository to understand how PyAutoGUI, Logging and other python bits can be utilized for different tasks. Each script is well-commented to explain its purpose and usage.
 
 ## Acknowledgments
 - [PyAutoGUI Documentation](https://pyautogui.readthedocs.io/en/latest/index.html)
-- [Logging Documentation](https://pyautogui.readthedocs.io/en/latest/index.html](https://docs.python.org/3/library/logging.html))
+- [Logging Documentation](https://docs.python.org/3/library/logging.html)
 - [Kyle Seaford](https://github.com/KyleSeaford)
