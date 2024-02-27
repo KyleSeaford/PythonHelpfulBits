@@ -4,7 +4,7 @@ Welcome to Python Helpful Bits, a repository showcasing the usage of PyAutoGUI, 
 
 ## Contents
 
-This repository contains examples and demonstrations of using PyAutoGUI for various tasks, including:
+This repository contains examples and demonstrations of using Python for various tasks, including:
 
 - Displaying message boxes: [here](https://github.com/KyleSeaford/Pyautogui-KS/blob/main/BoxPopUPs.py)
 
