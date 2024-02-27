@@ -20,7 +20,7 @@ This repository contains examples and demonstrations of using PyAutoGUI for vari
 
 - Capturing the screen size: [here](https://github.com/KyleSeaford/Pyautogui-KS/blob/main/ScreenSize.py)
 
-- Logging in scripts: [here]https://github.com/KyleSeaford/Pyautogui-KS/blob/main/logging.py)
+- Logging in scripts: [here](https://github.com/KyleSeaford/Pyautogui-KS/blob/main/logging.py)
 
 ## Getting Started
 
