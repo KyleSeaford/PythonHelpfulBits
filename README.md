@@ -18,6 +18,9 @@ This repository contains examples and demonstrations of using Python for various
 
 - Logging in scripts: [here](https://github.com/KyleSeaford/Pyautogui-KS/blob/main/logging.py)
 
+- user questions (ensures input is valid): [here](https://github.com/KyleSeaford/Pyautogui-KS/blob/main/userQuestions.py)
+
+
 ## Getting Started
 
 To use in your own projects, you can install these via pip:
