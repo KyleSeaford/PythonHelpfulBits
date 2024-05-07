@@ -20,6 +20,8 @@ This repository contains examples and demonstrations of using Python for various
 
 - user questions (ensures input is valid): [here](https://github.com/KyleSeaford/Pyautogui-KS/blob/main/userQuestions.py)
 
+- email with python: [here](https://github.com/KyleSeaford/Pyautogui-KS/blob/main/email.py)
+
 
 ## Getting Started
 
