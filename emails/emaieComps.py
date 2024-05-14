@@ -61,7 +61,7 @@ smtp_port = 587
 
 smtp_username = 'contact@kyle-seaford.co.uk'
 
-smtp_password = 'Ks_contact123'
+smtp_password = ''
 
 # Iterate over companies
 for name, details in companies.items():
