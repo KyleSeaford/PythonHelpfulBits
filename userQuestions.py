@@ -1,3 +1,5 @@
+# Description: This file contains functions that prompt the user for input.
+
 def questionString(question, defaultAnswer):
     answer = input(f"{question} [{defaultAnswer}]")
     if answer == "":

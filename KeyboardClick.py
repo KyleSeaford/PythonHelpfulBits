@@ -1,6 +1,6 @@
-# Import the pyautogui module, which allows us to interact with the screen and mouse
+# Description: This script demonstrates how to simulate keyboard clicks using the pyautogui module.
+
 import pyautogui
-# import the time module, which allows us to add delays to our code
 import time
 
 # Type a string 

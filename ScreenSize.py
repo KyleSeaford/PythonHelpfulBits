@@ -1,4 +1,5 @@
-# Import the pyautogui module, which allows us to interact with the screen and mouse
+# Description: This script will print the size of the computer screen in pixels (width, height).
+
 import pyautogui
 
 # Get the size of the computer screen in pixels (width, height)

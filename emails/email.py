@@ -1,21 +1,22 @@
+# Description: This file contains the function to send an email using the smtplib library.
+
 import smtplib
 from email.mime.text import MIMEText
-import datetime
 
-def sendlogTOkyle():
-    now = datetime.datetime.now()
-
-    sender = 'contact@kyle-seaford.co.uk' # email address
+def send():
+    sender = 'contact@kyle-seaford.co.uk' # senders email address
     receivers = ['projects@kyle-seaford.co.uk'] # recipient email address
-    # email deatails for sender account
+
+    # email details for sender account
     smtp_server = 'smtp.ionos.co.uk' 
     smtp_port = 587
-    smtp_username = '' # email address
-    smtp_password = '' # email password
+    smtp_username = 'contact@kyle-seaford.co.uk' # senders email address
+    smtp_password = '' # senders email password
 
     # Build the message with MIMEText for proper formatting
-    message = MIMEText(f"email at {now}")
-    message['Subject'] = f"subject gose here"
+    # body of the email
+    message = MIMEText("This is the body of the email.")
+    message['Subject'] = "This is the subject."
     message['From'] = sender
     message['To'] = ', '.join(receivers)
 
@@ -27,5 +28,6 @@ def sendlogTOkyle():
         
         smtpObj.sendmail(sender, receivers, message.as_string())
         print("Successfully sent email")
+
     except smtplib.SMTPException as e:
         print(f"Error: {e}")

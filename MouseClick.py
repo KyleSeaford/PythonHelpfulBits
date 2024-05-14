@@ -1,4 +1,5 @@
-# Import the pyautogui module, which allows us to interact with the screen and mouse
+# Description: This script demonstrates how to perform a left click, right click, double click, and click at a specific x and y coordinate using the PyAutoGUI library.
+
 import pyautogui
 
 # Perform a left click at the current mouse position
