@@ -1,4 +1,5 @@
-# Import the pyautogui module, which allows us to interact with the screen and mouse
+# Description: This script takes a screenshot of the entire screen and saves it to a file.
+
 import pyautogui
 
 # Take a screenshot of the entire screen and save it to a file

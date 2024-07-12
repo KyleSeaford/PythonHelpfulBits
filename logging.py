@@ -1,4 +1,4 @@
-# this is a script that shows how to create logging in a script
+# Description: This script demonstrates how to log messages to a file using the logging module in Python.
 
 import logging
 

@@ -1,4 +1,5 @@
-# Import the pyautogui module, which allows us to interact with the screen and mouse
+# description: This script demonstrates how to simulate mouse movements using the pyautogui module.
+
 import pyautogui
 
 # Move the mouse to the specified x and y coordinates

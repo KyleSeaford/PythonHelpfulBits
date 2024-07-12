@@ -1,3 +1,5 @@
+# Description: This script demonstrates how to use the confirm, alert, prompt, and password functions in the PyAutoGUI library to display message boxes with different types of input fields and buttons.
+
 import pyautogui
 
 # Use the confirm function to display a message box with "OK" and "Cancel" buttons
