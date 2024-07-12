@@ -3,28 +3,28 @@
 ## Step 1: Get a free trial of the Google Maps Places API
 - Step 1: Go to [https://console.cloud.google.com/apis/library/places-backend.googleapis.com](https://console.cloud.google.com/apis/library/places-backend.googleapis.com)
 - Step 2: Click `ENABLE`
-![main dashboard](doc\1.PNG)
+![main dashboard](doc/1.PNG)
 
 - Step 3: Log in too a google account
 
 - Step 4: Create a Project
-![main dashboard](doc\4.PNG)
-![main dashboard](doc\2.PNG)
-![alt text](doc\5.PNG)
+![main dashboard](doc/4.PNG)
+![main dashboard](doc/2.PNG)
+![alt text](doc/5.PNG)
 
 - Step 5: Enable The API
-![alt text](doc\image-1.PNG)
+![alt text](doc/image-1.png)
 Agree to what its asking
 
 - Step 6: Add your details, Im pretty sure it doesn't charge you
 
 - Step 7: Find your api key:
-![alt text](doc\7.PNG)
-![alt text](doc\8.PNG)
+![alt text](doc/7.PNG)
+![alt text](doc/8.PNG)
 Scroll down to Places API and click `keys`
-![alt text](doc\9.PNG)
-![alt text](doc\10.PNG)
-![alt text](doc\11.PNG)
+![alt text](doc/9.PNG)
+![alt text](doc/10.PNG)
+![alt text](doc/11.PNG)
 
 ## Step 2: The code
 - Take Your api key and put it on line `8` of `googleapiFind.py`
@@ -62,8 +62,8 @@ longitude = -2.1255158
 ## Step 5: Run the code and get companies:
 - The code should run and create spreadsheets with company data in if all done correctly (Hopefully)
 - The spreadsheets should look like this:
-![alt text](doc\123.PNG)
+![alt text](doc/123.PNG)
 
 ## Ive not been changed doing this but im not 100% sure so be careful
 - my billing statement for 1000 companies:
-![alt text](doc\21421.PNG)
+![alt text](doc/21421.PNG)
