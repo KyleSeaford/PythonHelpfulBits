@@ -49,7 +49,18 @@ urlpatterns = [
 ```
 Include the app URLs in the project by editing the main urls.py in your project directory (myproject/urls.py):
 
-Step 6: Explore and Build
+# Step 6: TEMPLATE FOLDER IN PROJECT FOLDER
+- creare a folder called `templates` and in that create `index.html`
+
+- eddit `views.py` to render the template:
+```python
+from django.http import HttpResponse
+from django.shortcuts import render, redirect
+
+
+def home(request):
+    return render(request, 'index.html')
+```
 
 Congratulations! You have successfully created a basic Django project and app. You can now explore Django's features, such as models, templates, forms, and more.
 
