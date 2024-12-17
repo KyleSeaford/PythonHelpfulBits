@@ -28,7 +28,7 @@ INSTALLED_APPS = [
     'myapp',
 ]
 ```
-Step 5: Create Views and Templates
+## Step 5: Create Views and Templates
 You can now define views and create templates for your app.
 Define a view by editing `views.py` in myapp:
 
