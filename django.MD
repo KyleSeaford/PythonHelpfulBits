@@ -9,7 +9,7 @@
 `pip install django`
 
 ## Step 2: Create a New Django Project
-`django-admin startproject myproject`
+`python -m django startproject`
   
 Navigate into the project directory:
 `cd myproject`
