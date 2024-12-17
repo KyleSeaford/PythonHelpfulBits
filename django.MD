@@ -14,19 +14,20 @@
 Navigate into the project directory:
 `cd myproject`
   
-Step 3: Run the Development Server
+## Step 3: Run the Development Server
 `python manage.py runserver`
   
 Access the application by going to: `http://127.0.0.1:8000/` You should see the Django welcome page.
 
-Step 4: Create a Django App
+## Step 4: Create a Django App
 In Django, a project can contain multiple apps. Here's how to create an app:
 Register the app by opening settings.py in your project directory (myproject/myproject/settings.py) and adding myapp to the INSTALLED_APPS list:
-
+```
 INSTALLED_APPS = [
     ...
     'myapp',
 ]
+```
 Step 5: Create Views and Templates
 You can now define views and create templates for your app.
 Define a view by editing views.py in myapp:
