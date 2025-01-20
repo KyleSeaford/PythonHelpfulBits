@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ToKa Fitness{% endblock %}</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" crossorigin="anonymous" href="https://static.vecteezy.com/system/resources/thumbnails/013/146/831/small/body-builder-lifting-a-dumbbell-png.png" type="image/x-icon">
+    
+    <style>
+        /* Increase the font size for better readability */
+        body {
+            font-size: 1.1rem; /* Adjust as needed */
+        }
+
+        .signup-button, .bookings-button {
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+            margin-right: 1rem !important; /* Add space between buttons */
+            color: white !important;
+        }
+    
+        .signup-button {
+            background-color: #36454F;
+            color: #fff;
+        }
+        .signup-button:hover {
+            background-color: #272523;
+            color: #fff;
+        }
+    
+        .bookings-button {
+            background-color: #CD7F32;
+            color: #fff !important;
+        }
+        .bookings-button:hover {
+            background-color: #FFAC1C;
+            color: #fff !important;
+        }
+    
+        /* Mobile menu toggling */
+        @media (min-width: 768px) {
+            .mobile-menu {
+                display: none;
+            }
+        }
+    
+        .navbar-brand {
+            display: flex;
+            align-items: center; /* Align logo and text vertically */
+            margin-right: 2rem; /* Add space to the right of the logo/text */
+        }
+    
+        .navbar-brand img {
+            margin-right: 0.5rem; /* Space between logo and text */
+        }
+    
+        .nav-link {
+            color: black !important;
+            margin-left: 1rem; /* Add space to the left of each nav link */
+        }
+    </style>
+
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/013/146/831/small/body-builder-lifting-a-dumbbell-png.png" alt="ToKa Fitness Logo" style="height: 35px; width: 35px;" class="rounded-circle">
+                ToKa Fitness
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'time_tables' %}">Time Tables</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'offers' %}">What we Offer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'updates' %}">Live Updates</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mr-2" href="{% url 'blog' %}">Blog</a>
+                    </li>
+                    <li class="nav-item signup-btton">
+                        <a class="nav-link bookings-button text-white" href="{% url 'login' %}" style="color: white !important;">My Bookings</a>
+                    </li>
+                    <li class="nav-item text-white">
+                        <a class="nav-link signup-button text-white" href="{% url 'signup' %}" style="color: white !important;">Become A Member</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Include Bootstrap JS and jQuery before the closing </body> tag -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    {% block content %}{% endblock %}
+</body>
+</html>
