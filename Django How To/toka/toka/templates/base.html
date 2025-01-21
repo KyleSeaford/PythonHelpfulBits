@@ -6,12 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}ToKa Fitness{% endblock %}</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <link rel="icon" crossorigin="anonymous" href="https://static.vecteezy.com/system/resources/thumbnails/013/146/831/small/body-builder-lifting-a-dumbbell-png.png" type="image/x-icon">
     
     <style>
         /* Increase the font size for better readability */
         body {
             font-size: 1.1rem; /* Adjust as needed */
+        }
+
+        .navbar {
+            position: relative; /* or fixed/sticky if you want */
+            z-index: 9999;      /* just needs to be higher than the hero's z-index */
         }
 
         .signup-button, .bookings-button {

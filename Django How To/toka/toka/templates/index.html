@@ -3,159 +3,207 @@
 {% block title %}ToKa Fitness{% endblock %}
 
 {% block content %}
-
 <style>
-    .background {
-        background-image: url('{% static 'background.webp' %}'); 
-        background-size: cover; 
-        background-position: center; 
-        height: 95vh; 
-        display: flex; 
-        align-items: center;
-        justify-content: center; 
-        opacity: 0.8;
-        width: 100%;
-    }
+  /* Hero Section Styles */
+  .hero-section {
+    position: relative;              /* Needed to place child elements absolutely inside */
+    height: 95vh;
+    width: 100%;
+    background-image: url("{% static 'background.webp' %}");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.8;                    /* Slight transparency if desired */
+    
+    display: flex;                   /* Use flex to align text on the right center */
+    justify-content: flex-end;       /* Push content block to the right */
+    align-items: center;            /* Center it vertically */
+  }
 
+  .hero-content {
+    /* A container for the text on the right */
+    max-width: 600px;               /* Limit width so text is readable */
+    margin-right: 5%;               /* Some right margin from screen edge */
+    text-align: left;               /* Or 'center' if you prefer text-centered */
+    color: #fff;
+    z-index: 999;
+  }
+
+  .hero-title {
+    font-size: 3em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.5em;
+  }
+
+  /* Image pinned to bottom-left */
+  .image-container {
+    position: absolute;             /* Position absolutely within hero-section */
+    bottom: 0;
+    left: 0;
+    margin-left: 15%;                /* Optional: small gap from left edge */
+  }
+
+  .image-container img {
+    width: 100%;
+    max-width: 800px;               /* Limit how large the image can get */
+    height: auto;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    /* Hide the image altogether on mobile,
+       or comment out if you prefer to keep it smaller */
     .image-container {
-        flex: 0 0 auto; 
-        margin-right: 50px; 
-        padding: 0 2% 0 2%;    
-        padding-top: 5.8%   
+      display: none;
     }
 
-    .image-container img {
-        width: 100%;
-        max-width: 800px; 
-        height: auto; 
+    /* Center text horizontally on smaller screens */
+    .hero-section {
+      justify-content: center;
     }
-
-    .content {
-        flex: 1;
-        color: white;
-        padding: 20px;
-        text-align: left;
+    .hero-content {
+      margin-right: 0;
+      text-align: center;
     }
-
-    h1.hero-title {
-        font-size: 3em;
-    }
-
-    p.hero-title {
-        font-size: 1.5em; 
-    }
-
-    /* Media query to hide image on smaller screens */
-    @media (max-width: 768px) {
-        .image-container {
-            display: none; 
-        }
-        
-        .content {
-            padding: 20px;
-        }
-    }
+  }
 </style>
 
 <div class="container-fluid">
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Image pinned to bottom-left -->
+    <div class="image-container">
+      <img 
+        src="{% static 'man.webp' %}" 
+        alt="A man illustration"
+      />
+    </div>
     
-    <section class="hero-section position-relative background">
-        <div class="container-fluid py-5" data-aos="fade-up">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-12 col-lg-6 text-center d-none d-md-block image-container ml-5" data-aos="zoom-in">
-                    <img src="{% static 'man.webp' %}" alt="A black robot on a printed mat with a line path and a robot figure design" class="img-fluid" />
-                </div>
-                <div class="col-12 col-lg-6 mb-5 mb-lg-0 content">
-                    <h1 class="hero-title mb-3">
-                        <span style="color:#cccccc">Welcome To</span><span style="color:#FFAC1C"> ToKa Fitness</span>
-                    </h1>
-                    <p class="hero-title mb-4">
-                        Your Fitness Journey Starts Here
-                    </p>
-                    <div>
-                        <a href="/signup/" class="btn btn-lg me-2 mb-2" style="color: #fff; background-color: #CD7F32;">
-                            Join Us
-                        </a>
-                    </div>
-                </div>
+    <!-- Text on the right center -->
+    <div class="hero-content">
+      <h1 class="hero-title mb-3">
+        <span style="color:#cccccc; text-shadow: 2px 1px #ffffff;">Welcome To</span> 
+        <span style="color:#FFAC1C; text-shadow: 2px 1px #ffffff;"> ToKa Fitness</span>
+      </h1>
+      <p class="hero-subtitle mb-4" style="text-shadow: 2px 1px #000000;">
+        Your Fitness Journey Starts Here
+      </p>
+      <div>
+        <a 
+          href="/signup/" 
+          class="btn btn-lg me-2 mb-2" 
+          style="color: #fff; background-color: #CD7F32;"
+        >
+          Join Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Why Join -->
+  <section style="min-height: 50vh; background-color: #f8f9fa; padding: 50px 0;">
+    <div class="container text-center">
+      <h2 class="mb-4" style="color: #FFAC1C;">Why Join ToKa Fitness?</h2>
+      <p class="lead mb-5" style="color: #333;">
+        At ToKa Fitness, we believe in empowering our members to achieve their fitness goals
+        through a supportive and motivating environment. Here are just a few reasons
+        to join our community:
+      </p>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title" style="color: #CD7F32;">Personalized Training Plans</h5>
+              <p class="card-text">
+                Our certified trainers will work with you to create a customized fitness plan
+                tailored to your individual needs and goals, ensuring you get
+                the most out of your workouts.
+              </p>
             </div>
+          </div>
         </div>
-    </section>
-
-
-    <section style="height: 50vh; background-color: #f8f9fa; padding: 50px 0;">
-        <div class="container text-center">
-            <h2 class="mb-4" style="color: #FFAC1C;">Why Join ToKa Fitness?</h2>
-            <p class="lead mb-5" style="color: #333;">
-                At ToKa Fitness, we believe in empowering our members to achieve their fitness goals through a supportive and motivating environment. Here are just a few reasons to join our community:
-            </p>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: #CD7F32;">Personalized Training Plans</h5>
-                            <p class="card-text">Our certified trainers will work with you to create a customized fitness plan tailored to your individual needs and goals, ensuring you get the most out of your workouts.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: #CD7F32;">State-of-the-Art Facilities</h5>
-                            <p class="card-text">Enjoy access to our modern gym equipped with the latest fitness technology and equipment, designed to enhance your workout experience.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: #CD7F32;">Community Support</h5>
-                            <p class="card-text">Join a vibrant community of fitness enthusiasts who motivate and support each other. Participate in group classes and events that foster camaraderie and fun.</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title" style="color: #CD7F32;">State-of-the-Art Facilities</h5>
+              <p class="card-text">
+                Enjoy access to our modern gym equipped with the latest fitness technology
+                and equipment, designed to enhance your workout experience.
+              </p>
             </div>
-            <div>
-                <a href="/signup/" class="btn btn-lg" style="color: #fff; background-color: #CD7F32;">
-                    Start Your Journey Today!
-                </a>
-            </div>
+          </div>
         </div>
-    </section>
-
-    <section style="height: 50vh; background-color: #e9ecef; padding: 50px 0;">
-        <div class="container text-center">
-            <h2 class="mb-4" style="color: #FFAC1C;">Our Fitness Programs</h2>
-            <p class="lead mb-5" style="color: #333;">
-                At ToKa Fitness, we offer a variety of programs designed to cater to all fitness levels and preferences. Whether you're a beginner or an experienced athlete, we have something for everyone!
-            </p>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: #CD7F32;">Group Classes</h5>
-                            <p class="card-text">Join our energetic group classes, including yoga, Zumba, and HIIT, where you can work out with friends and meet new people.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: #CD7F32;">Personal Training</h5>
-                            <p class="card-text">Work one-on-one with our certified trainers who will guide you through personalized workouts and nutrition plans tailored to your goals.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title" style="color: #CD7F32;">Nutrition Coaching</h5>
-                            <p class="card-text">Get expert advice on nutrition and meal planning to complement your fitness routine and help you achieve optimal results.</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title" style="color: #CD7F32;">Community Support</h5>
+              <p class="card-text">
+                Join a vibrant community of fitness enthusiasts who motivate and support each other.
+                Participate in group classes and events that foster camaraderie and fun.
+              </p>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+      <div>
+        <a href="/signup/" class="btn btn-lg" style="color: #fff; background-color: #CD7F32;">
+          Start Your Journey Today!
+        </a>
+      </div>
+    </div>
+  </section>
 
+  <!-- Section: Fitness Programs -->
+  <section style="min-height: 50vh; background-color: #e9ecef; padding: 50px 0;">
+    <div class="container text-center">
+      <h2 class="mb-4" style="color: #FFAC1C;">Our Fitness Programs</h2>
+      <p class="lead mb-5" style="color: #333;">
+        At ToKa Fitness, we offer a variety of programs designed to cater to all fitness levels
+        and preferences. Whether you're a beginner or an experienced athlete, we have
+        something for everyone!
+      </p>
+      <div class="row">
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title" style="color: #CD7F32;">Group Classes</h5>
+              <p class="card-text">
+                Join our energetic group classes, including yoga, Zumba, and HIIT,
+                where you can work out with friends and meet new people.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title" style="color: #CD7F32;">Personal Training</h5>
+              <p class="card-text">
+                Work one-on-one with our certified trainers who will guide you
+                through personalized workouts and nutrition plans tailored to your goals.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title" style="color: #CD7F32;">Nutrition Coaching</h5>
+              <p class="card-text">
+                Get expert advice on nutrition and meal planning to complement
+                your fitness routine and help you achieve optimal results.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Include Popper (if needed) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+</div>
 {% endblock %}
